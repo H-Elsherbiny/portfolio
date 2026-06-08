@@ -15,9 +15,9 @@ export default function Card({
 }: CardProps) {
   const paddings = {
     none: "",
-    sm: "p-4",
-    md: "p-6",
-    lg: "p-8",
+    sm: "p-5",
+    md: "p-8",
+    lg: "p-10",
   };
 
   return (
