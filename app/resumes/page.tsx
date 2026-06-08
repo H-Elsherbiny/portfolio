@@ -40,7 +40,7 @@ export default function ResumesPage() {
           Resumes
         </span>
 
-        <h1 className="text-text-primary">Targeted Resumes</h1>
+        <h1 className="text-text-primary">Resumes</h1>
 
         <p className="text-text-secondary mt-4 text-lg max-w-2xl mx-auto">
           Please choose and download the resume version that best aligns with the specific role or expertise you are seeking.

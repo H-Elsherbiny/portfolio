@@ -53,14 +53,29 @@ export default function ProjectFilter({
         </div>
 
         {/* Sort */}
-        <select
-          onChange={(e) => onSortChange(e.target.value)}
-          className="px-4 py-2.5 rounded-lg bg-bg-secondary border border-border text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all cursor-pointer"
-        >
-          <option value="featured">Featured First</option>
-          <option value="title-asc">Title A-Z</option>
-          <option value="title-desc">Title Z-A</option>
-        </select>
+        <div className="relative">
+          <select
+            onChange={(e) => onSortChange(e.target.value)}
+            className="w-full sm:w-auto appearance-none pl-4 pr-10 py-2.5 rounded-lg bg-bg-secondary border border-border text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all cursor-pointer"
+          >
+            <option value="featured">Featured First</option>
+            <option value="title-asc">Title A-Z</option>
+            <option value="title-desc">Title Z-A</option>
+          </select>
+          <svg
+            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-text-secondary pointer-events-none"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </div>
       </div>
 
       {/* Category Tabs */}
@@ -69,11 +84,10 @@ export default function ProjectFilter({
           <button
             key={category}
             onClick={() => onCategoryChange(category)}
-            className={`px-5 py-2 text-sm font-medium rounded-full border transition-all cursor-pointer ${
-              activeCategory === category
+            className={`px-5 py-2 text-sm font-medium rounded-full border transition-all cursor-pointer ${activeCategory === category
                 ? "bg-accent text-white border-accent"
                 : "bg-bg-secondary text-text-secondary border-border hover:border-border-hover hover:text-text-primary"
-            }`}
+              }`}
           >
             {category}
           </button>
