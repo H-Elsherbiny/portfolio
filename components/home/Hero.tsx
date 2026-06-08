@@ -3,9 +3,9 @@ import SocialLinks from "@/components/shared/SocialLinks";
 
 export default function Hero() {
   return (
-    <section className="section-container relative overflow-hidden">
+    <section className="section-container relative">
       {/* Subtle background gradient */}
-      <div className="absolute inset-0 pointer-events-none -z-10">
+      <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-accent/5 blur-[120px]" />
       </div>
 
@@ -17,9 +17,9 @@ export default function Hero() {
         </div>
 
         {/* Name */}
-        <h1 className="animate-fade-in-up opacity-0 stagger-1 text-5xl md:text-7xl font-bold tracking-tight">
+        <h1 className="animate-fade-in-up opacity-0 stagger-1 text-5xl md:text-7xl font-bold tracking-tight py-4 leading-normal">
           Hossam{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 inline-block">Elsherbiny</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">Elsherbiny</span>
         </h1>
 
         {/* Title */}
