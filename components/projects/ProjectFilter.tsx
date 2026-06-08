@@ -24,7 +24,7 @@ export default function ProjectFilter({
   };
 
   return (
-    <div className="flex flex-col gap-6 mb-10">
+    <div className="flex flex-col gap-8 mb-12">
       {/* Search & Sort Row */}
       <div className="flex flex-col sm:flex-row gap-4">
         {/* Search */}
@@ -69,7 +69,7 @@ export default function ProjectFilter({
           <button
             key={category}
             onClick={() => onCategoryChange(category)}
-            className={`px-4 py-2 text-sm rounded-lg border transition-all cursor-pointer ${
+            className={`px-5 py-2 text-sm font-medium rounded-full border transition-all cursor-pointer ${
               activeCategory === category
                 ? "bg-accent text-white border-accent"
                 : "bg-bg-secondary text-text-secondary border-border hover:border-border-hover hover:text-text-primary"
