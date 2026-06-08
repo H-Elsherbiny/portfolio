@@ -13,22 +13,22 @@ const resumesList = [
     role: "AI & LLM Engineer",
     description: "Tailored for roles focusing on Generative AI, Large Language Models (LLMs), RAG systems, and Agentic workflows.",
     skills: ["LLMs", "RAG Systems", "Agentic AI", "LangGraph", "FastAPI", "Python"],
-    pdfUrl: "/resumes/hossam-elsherbiny-ai-engineer.pdf",
-    filename: "hossam-elsherbiny-ai-engineer.pdf",
+    pdfUrl: "/resumes/Hossam_Elsherbiny_AI_LLM_Engineer_Resume.pdf",
+    filename: "Hossam_Elsherbiny_AI_LLM_Engineer_Resume.pdf",
   },
   {
     role: "Machine Learning & CV Engineer",
     description: "Tailored for roles focusing on Computer Vision, Deep Learning, Object Detection, PyTorch, and Edge AI deployment.",
     skills: ["Computer Vision", "Deep Learning", "PyTorch", "OpenCV", "TensorFlow", "Edge Deployment"],
-    pdfUrl: "/resumes/hossam-elsherbiny-ml-engineer.pdf",
-    filename: "hossam-elsherbiny-ml-engineer.pdf",
+    pdfUrl: "/resumes/Hossam_Elsherbiny_ML_CV_Engineer_Resume.pdf",
+    filename: "Hossam_Elsherbiny_ML_CV_Engineer_Resume.pdf",
   },
   {
     role: "Data Scientist",
     description: "Tailored for roles focusing on statistical modeling, predictive analytics, data analysis, and classic machine learning.",
     skills: ["Statistical Modeling", "Machine Learning", "SQL", "Pandas", "Scikit-Learn", "Data Viz"],
-    pdfUrl: "/resumes/hossam-elsherbiny-data-scientist.pdf",
-    filename: "hossam-elsherbiny-data-scientist.pdf",
+    pdfUrl: "/resumes/Hossam_Elsherbiny_Data_Scientist_Resume.pdf",
+    filename: "Hossam_Elsherbiny_Data_Scientist_Resume.pdf",
   },
 ];
 
@@ -116,7 +116,7 @@ export default function ResumesPage() {
                 Download PDF
               </Button>
               <p className="text-[10px] text-center text-text-tertiary">
-                Filename: <code className="bg-bg-secondary px-1 py-0.5 rounded">{resume.filename}</code>
+                Filename: <code className="bg-bg-secondary px-1.5 py-0.5 rounded break-all inline-block">{resume.filename}</code>
               </p>
             </div>
           </Card>
