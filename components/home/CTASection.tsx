@@ -38,8 +38,8 @@ export default function CTASection() {
                 <path d="m12 5 7 7-7 7" />
               </svg>
             </Button>
-            <Button href="/resume" variant="secondary" size="lg">
-              View Resume
+            <Button href="/resumes" variant="secondary" size="lg">
+              View Resumes
             </Button>
           </div>
         </div>

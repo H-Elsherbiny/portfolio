@@ -12,7 +12,7 @@ export const siteConfig: SiteConfig = {
     { label: "Home", href: "/" },
     { label: "Projects", href: "/projects" },
     { label: "About", href: "/about" },
-    { label: "Resume", href: "/resume" },
+    { label: "Resumes", href: "/resumes" },
     { label: "Contact", href: "/contact" },
   ],
   socialLinks: [

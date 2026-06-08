@@ -71,8 +71,8 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-8">
-            <Button href="/resume" variant="primary">
-              Download Resume
+            <Button href="/resumes" variant="primary">
+              View Resumes
             </Button>
           </div>
         </div>

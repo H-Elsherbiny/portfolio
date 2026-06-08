@@ -52,8 +52,8 @@ export default function Hero() {
               <path d="m12 5 7 7-7 7" />
             </svg>
           </Button>
-          <Button href="/resume" variant="secondary" size="lg">
-            Download Resume
+          <Button href="/resumes" variant="secondary" size="lg">
+            View Resumes
           </Button>
           <Button href="/contact" variant="outline" size="lg">
             Contact Me
