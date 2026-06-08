@@ -21,7 +21,7 @@ export default function ExperienceSection() {
           title="Work Experience"
           subtitle="My professional journey in AI and data science."
         />
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <Timeline items={timelineItems} />
         </div>
       </div>

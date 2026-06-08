@@ -21,7 +21,7 @@ export default function EducationSection() {
           title="Academic Background"
           subtitle="My educational foundation in computer science and AI."
         />
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <Timeline items={timelineItems} />
         </div>
       </div>
