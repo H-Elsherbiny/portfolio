@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { siteConfig } from "@/data/site-config";
+import ThemeProvider from "@/components/layout/ThemeProvider";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import ScrollProgress from "@/components/ui/ScrollProgress";
+import BackToTop from "@/components/ui/BackToTop";
 import "./globals.css";
 
 const inter = Inter({
@@ -64,7 +69,13 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-screen flex flex-col antialiased">
-        {children}
+        <ThemeProvider>
+          <Header />
+          <ScrollProgress />
+          <main className="flex-1 pt-16">{children}</main>
+          <Footer />
+          <BackToTop />
+        </ThemeProvider>
       </body>
     </html>
   );
