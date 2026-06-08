@@ -11,7 +11,6 @@ export const siteConfig: SiteConfig = {
   navItems: [
     { label: "Home", href: "/" },
     { label: "Projects", href: "/projects" },
-    { label: "Blog", href: "/blog" },
     { label: "About", href: "/about" },
     { label: "Resume", href: "/resume" },
     { label: "Contact", href: "/contact" },
