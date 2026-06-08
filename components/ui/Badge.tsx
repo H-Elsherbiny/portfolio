@@ -15,7 +15,7 @@ export default function Badge({
     default:
       "bg-bg-secondary text-text-secondary border border-border",
     accent:
-      "bg-accent-muted text-accent border border-accent/20",
+      "bg-indigo-500/10 text-indigo-400 border border-indigo-500/20",
     outline:
       "border border-border text-text-secondary",
   };

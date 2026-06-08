@@ -16,7 +16,7 @@ export default function SectionHeader({
   return (
     <div className={`mb-12 ${alignment}`}>
       {badge && (
-        <span className="inline-block mb-4 px-3 py-1 text-xs font-medium rounded-full bg-accent-muted text-accent border border-accent/20 uppercase tracking-wider">
+        <span className="inline-block mb-4 px-3 py-1 text-xs font-medium rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 uppercase tracking-wider">
           {badge}
         </span>
       )}
