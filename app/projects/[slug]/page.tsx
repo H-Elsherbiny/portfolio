@@ -109,12 +109,12 @@ export default async function ProjectDetailPage({
       </div>
 
       {/* Content Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
         {/* Main Content */}
-        <div className="lg:col-span-2 space-y-10">
+        <div className="lg:col-span-2 space-y-12 md:space-y-16">
           {/* Problem Statement */}
           <section>
-            <h2 className="text-xl font-semibold text-text-primary mb-4">
+            <h2 className="text-2xl font-semibold text-text-primary mb-6">
               Problem Statement
             </h2>
             <p className="text-text-secondary">{project.problemStatement}</p>
@@ -122,7 +122,7 @@ export default async function ProjectDetailPage({
 
           {/* Solution */}
           <section>
-            <h2 className="text-xl font-semibold text-text-primary mb-4">
+            <h2 className="text-2xl font-semibold text-text-primary mb-6">
               Solution
             </h2>
             <p className="text-text-secondary">{project.solution}</p>
@@ -131,7 +131,7 @@ export default async function ProjectDetailPage({
           {/* Architecture Placeholder */}
           {project.architectureDescription && (
             <section>
-              <h2 className="text-xl font-semibold text-text-primary mb-4">
+              <h2 className="text-2xl font-semibold text-text-primary mb-6">
                 Architecture
               </h2>
               <p className="text-text-secondary">
@@ -142,7 +142,7 @@ export default async function ProjectDetailPage({
 
           {/* Key Features */}
           <section>
-            <h2 className="text-xl font-semibold text-text-primary mb-4">
+            <h2 className="text-2xl font-semibold text-text-primary mb-6">
               Key Features
             </h2>
             <ul className="space-y-3">
@@ -160,7 +160,7 @@ export default async function ProjectDetailPage({
 
           {/* Challenges */}
           <section>
-            <h2 className="text-xl font-semibold text-text-primary mb-4">
+            <h2 className="text-2xl font-semibold text-text-primary mb-6">
               Challenges
             </h2>
             <ul className="space-y-3">
@@ -178,7 +178,7 @@ export default async function ProjectDetailPage({
 
           {/* Results */}
           <section>
-            <h2 className="text-xl font-semibold text-text-primary mb-4">
+            <h2 className="text-2xl font-semibold text-text-primary mb-6">
               Results & Metrics
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -195,7 +195,7 @@ export default async function ProjectDetailPage({
 
           {/* Lessons Learned */}
           <section>
-            <h2 className="text-xl font-semibold text-text-primary mb-4">
+            <h2 className="text-2xl font-semibold text-text-primary mb-6">
               Lessons Learned
             </h2>
             <ul className="space-y-3">
@@ -213,7 +213,7 @@ export default async function ProjectDetailPage({
         </div>
 
         {/* Sidebar */}
-        <div className="space-y-6">
+        <div className="space-y-6 lg:sticky lg:top-24 h-fit">
           {/* Technologies */}
           <Card hover={false}>
             <h3 className="text-sm font-semibold text-text-primary mb-4 uppercase tracking-wider">
