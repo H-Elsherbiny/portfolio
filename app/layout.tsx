@@ -69,6 +69,35 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-screen flex flex-col antialiased">
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Hossam Elsherbiny",
+              jobTitle: "AI Engineer & Data Scientist",
+              url: siteConfig.url,
+              email: "hossam.elsherbiny95@gmail.com",
+              sameAs: [
+                "https://github.com/H-Elsherbiny",
+                "https://linkedin.com/in/h-elsherbiny",
+              ],
+              knowsAbout: [
+                "Artificial Intelligence",
+                "Machine Learning",
+                "Large Language Models",
+                "Generative AI",
+                "Natural Language Processing",
+                "Computer Vision",
+                "Data Science",
+                "RAG Systems",
+                "Agentic AI",
+              ],
+            }),
+          }}
+        />
         <ThemeProvider>
           <Header />
           <ScrollProgress />
