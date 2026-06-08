@@ -1,8 +1,19 @@
+import Hero from "@/components/home/Hero";
+import FeaturedProjects from "@/components/home/FeaturedProjects";
+import SkillsSection from "@/components/home/SkillsSection";
+import ExperienceSection from "@/components/home/ExperienceSection";
+import EducationSection from "@/components/home/EducationSection";
+import CTASection from "@/components/home/CTASection";
+
 export default function Home() {
   return (
-    <div className="section-container section-spacing">
-      <h1 className="gradient-text">Hossam Elsherbiny</h1>
-      <p className="text-xl mt-4">AI Engineer & Data Scientist</p>
-    </div>
+    <>
+      <Hero />
+      <FeaturedProjects />
+      <SkillsSection />
+      <ExperienceSection />
+      <EducationSection />
+      <CTASection />
+    </>
   );
 }
