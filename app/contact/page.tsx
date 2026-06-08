@@ -19,14 +19,15 @@ export default function ContactPage() {
         subtitle="Have a project in mind or want to discuss an opportunity? I'd love to hear from you."
       />
 
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
-        {/* Form */}
+      <div className="max-w-2xl mx-auto space-y-6">
+        {/* Form is hidden for now as it doesn't dispatch messages
         <div className="lg:col-span-3">
           <ContactForm />
         </div>
+        */}
 
         {/* Contact Info */}
-        <div className="lg:col-span-2 space-y-6">
+        <div className="space-y-6">
           <Card hover={false}>
             <h3 className="text-sm font-semibold text-text-primary mb-4 uppercase tracking-wider">
               Contact Information
