@@ -17,9 +17,9 @@ export default function FeaturedProjects() {
           subtitle="A selection of projects showcasing my expertise in AI, LLMs, and Computer Vision."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featured.map((project) => (
-            <Card key={project.slug} className="flex flex-col group">
+            <Card key={project.slug} className="flex flex-col group h-full">
               {/* Category */}
               <Badge variant="accent" className="w-fit mb-4">
                 {project.category}
