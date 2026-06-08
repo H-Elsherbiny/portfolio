@@ -21,12 +21,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </h3>
 
       {/* Description */}
-      <p className="text-sm text-text-secondary mt-3 flex-1">
+      <p className="text-sm text-text-secondary mt-4 flex-1">
         {project.shortDescription}
       </p>
 
       {/* Tech Stack */}
-      <div className="flex flex-wrap gap-1.5 mt-4">
+      <div className="flex flex-wrap gap-2 mt-6">
         {project.techStack.slice(0, 5).map((tech) => (
           <Badge key={tech} variant="default">
             {tech}
@@ -38,7 +38,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       {/* Actions */}
-      <div className="flex items-center gap-3 mt-6 pt-4 border-t border-border">
+      <div className="flex items-center gap-3 mt-8 pt-5 border-t border-border">
         <Link
           href={`/projects/${project.slug}`}
           className="text-sm text-text-secondary hover:text-accent transition-colors inline-flex items-center gap-1.5"
