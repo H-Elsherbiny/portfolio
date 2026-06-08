@@ -5,21 +5,21 @@ export default function Hero() {
   return (
     <section className="section-container relative overflow-hidden">
       {/* Subtle background gradient */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 pointer-events-none -z-10">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-accent/5 blur-[120px]" />
       </div>
 
-      <div className="flex flex-col items-center text-center py-20 md:py-32">
+      <div className="flex flex-col items-center text-center pt-32 pb-16 md:pt-48 md:pb-32">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent-muted border border-accent/20 text-accent text-xs font-medium mb-8 animate-fade-in">
-          <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-8 animate-fade-in">
+          <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
           Available for opportunities
         </div>
 
         {/* Name */}
-        <h1 className="animate-fade-in-up opacity-0 stagger-1">
+        <h1 className="animate-fade-in-up opacity-0 stagger-1 text-5xl md:text-7xl font-bold tracking-tight">
           Hossam{" "}
-          <span className="gradient-text">Elsherbiny</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 inline-block">Elsherbiny</span>
         </h1>
 
         {/* Title */}
