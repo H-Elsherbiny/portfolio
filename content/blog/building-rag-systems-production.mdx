@@ -1,0 +1,38 @@
+---
+title: "Building RAG Systems for Production"
+excerpt: "A practical guide to designing and deploying Retrieval-Augmented Generation systems that scale reliably in production environments."
+publishedAt: "2025-03-15"
+tags:
+  - "RAG"
+  - "LLMs"
+  - "Production"
+  - "Vector Databases"
+category: "LLM Engineering"
+readingTime: 8
+featured: true
+---
+
+## Introduction
+
+Retrieval-Augmented Generation (RAG) has become the go-to architecture for building LLM applications that need access to domain-specific knowledge. In this post, I share practical lessons from building production RAG systems.
+
+## Key Considerations
+
+### 1. Chunking Strategy
+
+The way you split your documents has the biggest impact on retrieval quality. Consider semantic chunking over fixed-size splits.
+
+### 2. Embedding Model Selection
+
+Choose your embedding model based on your domain. General-purpose models work for most cases, but domain-specific fine-tuning can improve recall by 20-30%.
+
+### 3. Vector Store Architecture
+
+For production workloads, consider:
+- **Indexing strategy**: HNSW vs IVF based on your scale
+- **Metadata filtering**: Pre-filter before vector search to reduce noise
+- **Hybrid search**: Combine dense and sparse retrieval
+
+## Conclusion
+
+Building production RAG systems requires careful attention to chunking, retrieval, and evaluation. Start simple, measure rigorously, and iterate based on real user queries.

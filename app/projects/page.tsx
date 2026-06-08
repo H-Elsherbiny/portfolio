@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { projects } from "@/data/projects";
+import { getProjects } from "@/data/projects";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ProjectsList from "@/components/projects/ProjectsList";
 
@@ -9,7 +9,9 @@ export const metadata: Metadata = {
     "Explore my portfolio of AI, Machine Learning, NLP, Computer Vision, and Data Science projects. Each project demonstrates real-world problem-solving with modern technologies.",
 };
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+  const projects = await getProjects();
+
   return (
     <div className="section-container section-spacing">
       <SectionHeader

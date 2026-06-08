@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { projectCategories } from "@/data/projects";
+import { projectCategories } from "@/types";
 
 interface ProjectFilterProps {
   onSearchChange: (query: string) => void;

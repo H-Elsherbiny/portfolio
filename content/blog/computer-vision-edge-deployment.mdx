@@ -1,0 +1,41 @@
+---
+title: "Deploying Computer Vision Models at the Edge"
+excerpt: "Strategies for optimizing and deploying CV models on resource-constrained devices without sacrificing accuracy."
+publishedAt: "2025-01-10"
+tags:
+  - "Computer Vision"
+  - "Edge Computing"
+  - "Model Optimization"
+  - "Deployment"
+category: "Computer Vision"
+readingTime: 7
+featured: false
+---
+
+## The Edge Deployment Challenge
+
+Deploying computer vision models at the edge presents unique challenges: limited compute, memory constraints, and real-time requirements. Here's how to navigate them.
+
+## Model Optimization Techniques
+
+### Quantization
+
+Converting FP32 weights to INT8 can reduce model size by 4x with minimal accuracy loss.
+
+### Pruning
+
+Remove redundant connections to reduce computation without retraining from scratch.
+
+### Knowledge Distillation
+
+Train a smaller "student" model to mimic a larger "teacher" model's behavior.
+
+## Framework Selection
+
+- **ONNX Runtime**: Great portability across platforms
+- **TensorRT**: Best performance on NVIDIA hardware
+- **TFLite**: Optimized for mobile and embedded devices
+
+## Real-World Results
+
+In our OMR grading project, model optimization reduced inference time from 200ms to 35ms on a Raspberry Pi 4, enabling real-time grading in resource-constrained environments.

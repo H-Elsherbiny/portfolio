@@ -1,0 +1,42 @@
+---
+title: "OMR Grading API"
+shortDescription: "Automated optical mark recognition system that grades bubble-sheet exams using computer vision, deployed as a production FastAPI service."
+fullDescription: "A production-ready API service that uses computer vision techniques to detect, analyze, and grade bubble-sheet (OMR) examinations. The system handles image preprocessing, bubble detection, answer extraction, and scoring with high accuracy."
+category: "Computer Vision"
+techStack:
+  - "Python"
+  - "OpenCV"
+  - "FastAPI"
+  - "NumPy"
+  - "Docker"
+  - "REST API"
+featured: true
+githubUrl: "https://github.com/H-Elsherbiny/omr-grading-api"
+problemStatement: "Manual grading of bubble-sheet exams is time-consuming, error-prone, and doesn't scale. Existing OMR solutions are often expensive proprietary systems requiring specialized hardware."
+solution: "Built a software-only OMR solution using OpenCV that processes standard camera/scanner images. The FastAPI service provides a scalable REST endpoint that accepts exam images and returns graded results with per-question analytics."
+keyFeatures:
+  - "Perspective correction for skewed/rotated sheets"
+  - "Robust bubble detection using contour analysis"
+  - "Multi-answer and no-answer detection"
+  - "RESTful API with batch processing support"
+  - "Per-question analytics and score breakdown"
+  - "Docker containerized for easy deployment"
+challenges:
+  - "Handling varied image quality and lighting conditions"
+  - "Robust perspective transformation for skewed documents"
+  - "Distinguishing between partially filled and fully filled bubbles"
+  - "Achieving real-time processing speed for batch grading"
+results:
+  - "98%+ grading accuracy on properly scanned sheets"
+  - "Processes 50+ sheets per minute in batch mode"
+  - "Deployed as Docker container with automated CI/CD"
+  - "Reduces grading time by 95% compared to manual grading"
+lessonsLearned:
+  - "Image preprocessing is the most critical factor in CV pipeline accuracy"
+  - "Adaptive thresholding outperforms fixed thresholds for varied conditions"
+  - "FastAPI's async capabilities are ideal for I/O-heavy image processing APIs"
+---
+
+# Case Study: OMR Grading API
+
+High-performance computer vision implementation for automated grading, packaged as a FastAPI backend.

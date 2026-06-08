@@ -19,6 +19,15 @@ export interface SocialLink {
 
 // --- Projects ---
 
+export const projectCategories = [
+  "All",
+  "AI Agents & LLMs",
+  "NLP & Speech AI",
+  "Computer Vision",
+  "Robotics",
+  "Data Science",
+] as const;
+
 export type ProjectCategory =
   | "AI Agents & LLMs"
   | "NLP & Speech AI"

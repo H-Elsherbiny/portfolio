@@ -1,10 +1,12 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/data/site-config";
-import { projects } from "@/data/projects";
-import { blogPosts } from "@/data/blog-posts";
+import { getProjects } from "@/data/projects";
+import { getBlogPosts } from "@/data/blog-posts";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = siteConfig.url;
+  const projects = await getProjects();
+  const blogPosts = await getBlogPosts();
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [

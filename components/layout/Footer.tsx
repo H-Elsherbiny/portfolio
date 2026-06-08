@@ -58,9 +58,9 @@ export default function Footer() {
           <p className="text-xs text-text-tertiary">
             © {currentYear} Hossam Elsherbiny. All rights reserved.
           </p>
-          <p className="text-xs text-text-tertiary">
+          {/* <p className="text-xs text-text-tertiary">
             Built with Next.js & Tailwind CSS
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>

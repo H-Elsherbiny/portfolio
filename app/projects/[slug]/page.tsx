@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { projects, getProjectBySlug, getRelatedProjects } from "@/data/projects";
+import { getProjects, getProjectBySlug, getRelatedProjects } from "@/data/projects";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
+import { MDXRemote } from "next-mdx-remote/rsc";
 
 export async function generateStaticParams() {
+  const projects = await getProjects();
   return projects.map((project) => ({ slug: project.slug }));
 }
 
@@ -16,7 +18,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const project = getProjectBySlug(slug);
+  const project = await getProjectBySlug(slug);
   if (!project) return { title: "Project Not Found" };
 
   return {
@@ -36,13 +38,13 @@ export default async function ProjectDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const project = getProjectBySlug(slug);
+  const project = await getProjectBySlug(slug);
 
   if (!project) {
     notFound();
   }
 
-  const related = getRelatedProjects(slug);
+  const related = await getRelatedProjects(slug);
 
   return (
     <div className="section-container section-spacing">
@@ -210,6 +212,18 @@ export default async function ProjectDetailPage({
               ))}
             </ul>
           </section>
+
+          {/* Detailed Writeup */}
+          {project.content && project.content.trim() !== "" && (
+            <section className="border-t border-border pt-12">
+              <h2 className="text-2xl font-semibold text-text-primary mb-6">
+                Case Study Overview
+              </h2>
+              <div className="prose prose-invert max-w-none text-text-secondary leading-relaxed space-y-4">
+                <MDXRemote source={project.content} />
+              </div>
+            </section>
+          )}
         </div>
 
         {/* Sidebar */}

@@ -1,0 +1,42 @@
+---
+title: "Egyptian Arabic Speech Recognition"
+shortDescription: "Speech-to-text system specifically trained for Egyptian Arabic dialect using Whisper fine-tuning and custom language models for improved dialect recognition."
+fullDescription: "A specialized speech recognition system for Egyptian Arabic dialect. Fine-tuned OpenAI's Whisper model on Egyptian Arabic datasets with custom language model adaptation to handle dialect-specific vocabulary, phonetics, and code-switching patterns."
+category: "NLP & Speech AI"
+techStack:
+  - "Python"
+  - "Whisper"
+  - "Hugging Face"
+  - "PyTorch"
+  - "Transformers"
+  - "Librosa"
+featured: false
+githubUrl: "https://github.com/H-Elsherbiny/egyptian-arabic-speech-recognition"
+problemStatement: "Standard Arabic speech recognition systems perform poorly on Egyptian Arabic due to significant phonological and lexical differences. Egyptian Arabic lacks standardized orthography, making transcription particularly challenging."
+solution: "Fine-tuned Whisper on a curated Egyptian Arabic speech dataset with custom data preprocessing for dialect-specific phonetic patterns. Implemented post-processing rules for handling code-switching between Arabic and English."
+keyFeatures:
+  - "Whisper model fine-tuned on Egyptian Arabic"
+  - "Custom audio preprocessing pipeline"
+  - "Code-switching detection and handling"
+  - "Speaker diarization support"
+  - "Real-time transcription capability"
+  - "Evaluation metrics for dialect-specific accuracy"
+challenges:
+  - "Limited labeled data for Egyptian Arabic dialect"
+  - "Handling code-switching between Arabic and English"
+  - "Varied recording quality in training data"
+  - "Non-standardized orthography for dialect transcription"
+results:
+  - "30% improvement in WER over base Whisper for Egyptian Arabic"
+  - "Robust handling of common code-switching patterns"
+  - "Real-time transcription with acceptable latency"
+  - "Successful evaluation on diverse Egyptian Arabic speakers"
+lessonsLearned:
+  - "Domain-specific fine-tuning of large speech models yields significant accuracy gains"
+  - "Data quality matters more than data quantity for low-resource languages"
+  - "Post-processing rules can significantly improve transcription quality"
+---
+
+# Case Study: Egyptian Arabic Dialect Speech Recognition
+
+Fine-tuning OpenAI's Whisper model on Egyptian Arabic dialect to achieve low Word Error Rate (WER) speech-to-text.

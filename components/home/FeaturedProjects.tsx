@@ -5,8 +5,8 @@ import Card from "@/components/ui/Card";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 
-export default function FeaturedProjects() {
-  const featured = getFeaturedProjects();
+export default async function FeaturedProjects() {
+  const featured = await getFeaturedProjects();
 
   return (
     <section className="section-spacing">

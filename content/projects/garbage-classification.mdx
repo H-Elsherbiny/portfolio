@@ -1,0 +1,42 @@
+---
+title: "Garbage Classification"
+shortDescription: "Deep learning model for automated waste classification into recyclable categories using CNN architectures, achieving high accuracy on diverse waste images."
+fullDescription: "An automated waste classification system using deep learning that categorizes garbage images into recyclable and non-recyclable categories. Trained on a diverse dataset with data augmentation techniques to handle real-world image variability."
+category: "Computer Vision"
+techStack:
+  - "Python"
+  - "TensorFlow"
+  - "Keras"
+  - "OpenCV"
+  - "CNN"
+  - "Transfer Learning"
+featured: false
+githubUrl: "https://github.com/H-Elsherbiny/garbage-classification"
+problemStatement: "Waste sorting is largely manual, inefficient, and error-prone. Incorrect sorting leads to contamination of recyclable materials, reducing recycling effectiveness and increasing environmental impact."
+solution: "Developed a CNN-based image classification system using transfer learning (ResNet50) fine-tuned on a curated waste dataset. Implemented data augmentation to improve generalization across varied lighting and backgrounds."
+keyFeatures:
+  - "6-class waste categorization (glass, paper, cardboard, plastic, metal, trash)"
+  - "Transfer learning with ResNet50 backbone"
+  - "Extensive data augmentation pipeline"
+  - "Real-time inference capability"
+  - "Confusion matrix and per-class accuracy reporting"
+  - "Model export for edge deployment"
+challenges:
+  - "High intra-class variability in waste appearance"
+  - "Class imbalance in training data"
+  - "Distinguishing visually similar categories (e.g., plastic vs. glass)"
+  - "Achieving robust performance across varied lighting conditions"
+results:
+  - "94% overall classification accuracy on test set"
+  - "Real-time inference at 30+ FPS on GPU"
+  - "Successful generalization to unseen waste types"
+  - "Model optimized for potential edge deployment"
+lessonsLearned:
+  - "Transfer learning dramatically reduces training time and data requirements"
+  - "Data augmentation is crucial for real-world CV application robustness"
+  - "Confusion matrix analysis reveals systematic errors that guide model improvement"
+---
+
+# Case Study: Garbage Classification using Deep Learning
+
+Developing a transfer-learning convolutional neural network to automate municipal waste sorting.
