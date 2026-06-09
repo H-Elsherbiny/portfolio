@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTheme } from "@/components/layout/ThemeProvider";
 import { siteConfig } from "@/data/site-config";
@@ -8,6 +8,11 @@ import { siteConfig } from "@/data/site-config";
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-bg-primary/80 backdrop-blur-md">
@@ -39,10 +44,12 @@ export default function Header() {
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg text-text-secondary hover:text-text-primary hover:bg-bg-secondary transition-colors"
-              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+              className="p-2 rounded-lg text-text-secondary hover:text-text-primary hover:bg-bg-secondary transition-colors min-w-[34px] min-h-[34px] flex items-center justify-center"
+              aria-label={mounted ? `Switch to ${theme === "dark" ? "light" : "dark"} mode` : "Switch theme"}
             >
-              {theme === "dark" ? (
+              {!mounted ? (
+                <div className="w-[18px] h-[18px]" />
+              ) : theme === "dark" ? (
                 <svg
                   width="18"
                   height="18"

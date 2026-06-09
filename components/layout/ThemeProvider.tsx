@@ -42,11 +42,6 @@ export default function ThemeProvider({
     document.documentElement.setAttribute("data-theme", newTheme);
   };
 
-  // Prevent flash of wrong theme
-  if (!mounted) {
-    return <>{children}</>;
-  }
-
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}

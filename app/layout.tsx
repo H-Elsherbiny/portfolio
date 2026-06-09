@@ -4,6 +4,7 @@ import { siteConfig } from "@/data/site-config";
 import ThemeProvider from "@/components/layout/ThemeProvider";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import PageAnimatePresenter from "@/components/layout/PageAnimatePresenter";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import BackToTop from "@/components/ui/BackToTop";
 import "./globals.css";
@@ -101,7 +102,9 @@ export default function RootLayout({
         <ThemeProvider>
           <Header />
           <ScrollProgress />
-          <main className="flex-1 pt-16">{children}</main>
+          <main className="flex-1 pt-16">
+            <PageAnimatePresenter>{children}</PageAnimatePresenter>
+          </main>
           <Footer />
           <BackToTop />
         </ThemeProvider>
