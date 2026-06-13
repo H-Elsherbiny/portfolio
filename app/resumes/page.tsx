@@ -10,19 +10,10 @@ export const metadata: Metadata = {
     "Download Hossam Elsherbiny's targeted resumes tailored for AI Engineering, Machine Learning, and Data Science roles.",
 };
 
-const PREDEFINED_ROLES: Record<string, { description: string; skills: string[] }> = {
-  "AI & LLM Engineer": {
-    description: "Tailored for roles focusing on Generative AI, Large Language Models (LLMs), RAG systems, and Agentic workflows.",
-    skills: ["LLMs", "RAG Systems", "Agentic AI", "LangGraph", "FastAPI", "Python"],
-  },
-  "Machine Learning & CV Engineer": {
-    description: "Tailored for roles focusing on Computer Vision, Deep Learning, Object Detection, PyTorch, and Edge AI deployment.",
-    skills: ["Computer Vision", "Deep Learning", "PyTorch", "OpenCV", "TensorFlow", "Edge Deployment"],
-  },
-  "Data Scientist": {
-    description: "Tailored for roles focusing on statistical modeling, predictive analytics, data analysis, and classic machine learning.",
-    skills: ["Statistical Modeling", "Machine Learning", "SQL", "Pandas", "Scikit-Learn", "Data Viz"],
-  },
+const PREDEFINED_ROLES: Record<string, string> = {
+  "AI & LLM Engineer": "Tailored for roles focusing on Generative AI, Large Language Models (LLMs), RAG systems, and Agentic workflows.",
+  "Machine Learning & CV Engineer": "Tailored for roles focusing on Computer Vision, Deep Learning, Object Detection, PyTorch, and Edge AI deployment.",
+  "Data Scientist": "Tailored for roles focusing on statistical modeling, predictive analytics, data analysis, and classic machine learning.",
 };
 
 function parseResumeFile(filename: string) {
@@ -51,7 +42,7 @@ function parseResumeFile(filename: string) {
   return role;
 }
 
-function getRoleDetails(role: string) {
+function getRoleDescription(role: string): string {
   const matchedKey = Object.keys(PREDEFINED_ROLES).find(
     (key) =>
       key.toLowerCase() === role.toLowerCase() ||
@@ -63,15 +54,7 @@ function getRoleDetails(role: string) {
     return PREDEFINED_ROLES[matchedKey];
   }
   
-  return {
-    description: `Tailored resume focusing on ${role} experience, core technical capabilities, and projects.`,
-    skills: role
-      .split("&")
-      .flatMap((s) => s.split(" "))
-      .map((s) => s.trim())
-      .filter((s) => s.length > 2)
-      .slice(0, 6),
-  };
+  return `Tailored resume focusing on ${role} experience, core technical capabilities, and projects.`;
 }
 
 export default function ResumesPage() {
@@ -79,7 +62,6 @@ export default function ResumesPage() {
   let resumesList: Array<{
     role: string;
     description: string;
-    skills: string[];
     pdfUrl: string;
     filename: string;
   }> = [];
@@ -90,11 +72,10 @@ export default function ResumesPage() {
       
       resumesList = files.map((file) => {
         const role = parseResumeFile(file);
-        const details = getRoleDetails(role);
+        const description = getRoleDescription(role);
         return {
           role,
-          description: details.description,
-          skills: details.skills,
+          description,
           pdfUrl: `/resumes/${file}`,
           filename: file,
         };
@@ -165,7 +146,7 @@ export default function ResumesPage() {
 
       <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
         {resumesList.map((resume) => (
-          <Card key={resume.role} hover={true} className="flex flex-col justify-between w-full md:w-[360px] flex-shrink-0">
+          <Card key={resume.role} hover={true} className="flex flex-col justify-between w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm flex-shrink-0">
             <div className="space-y-4">
               {/* Document icon */}
               <div className="w-12 h-12 rounded-xl bg-accent-muted border border-accent/20 flex items-center justify-center">
