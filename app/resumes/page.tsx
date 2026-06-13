@@ -163,9 +163,9 @@ export default function ResumesPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
         {resumesList.map((resume) => (
-          <Card key={resume.role} hover={true} className="flex flex-col h-full justify-between">
+          <Card key={resume.role} hover={true} className="flex flex-col justify-between w-full md:w-[360px] flex-shrink-0">
             <div className="space-y-4">
               {/* Document icon */}
               <div className="w-12 h-12 rounded-xl bg-accent-muted border border-accent/20 flex items-center justify-center">
@@ -194,18 +194,6 @@ export default function ResumesPage() {
                 <p className="text-sm text-text-secondary mt-2 leading-relaxed">
                   {resume.description}
                 </p>
-              </div>
-
-              {/* Skills Tags */}
-              <div className="flex flex-wrap gap-1.5 pt-2">
-                {resume.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-bg-secondary text-text-secondary border border-border"
-                  >
-                    {skill}
-                  </span>
-                ))}
               </div>
             </div>
 
